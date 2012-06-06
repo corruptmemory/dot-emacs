@@ -1,0 +1,15 @@
+abbrev_defs
+ac-comphist.dat
+anything-c-adaptive-history
+places
+eshell
+elpa
+backups
+*.elc
+var
+image-dired
+auto-save-list
+.smex-items
+url
+*~
+
