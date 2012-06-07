@@ -17,20 +17,11 @@
  '(erc-fill-mode nil)
  '(erc-modules (quote (autoaway autojoin completion dcc fill list log match move-to-prompt notify readonly stamp spelling track truncate hl-nicks netsplit button networks ring noncommands irccontrols menu)))
  '(erc-nick "corruptmemory")
- '(erc-nickserv-passwords (quote ((freenode (("corruptmemory" . "4a55word"))))))
  '(erc-port 8001)
  '(erc-user-full-name "Jim Powers")
  '(fill-column 78)
  '(frame-title-format (quote ("%f - " user-real-login-name "@" system-name)) t)
  '(global-highline-mode t)
- '(ido-auto-merge-work-directories-length nil)
- '(ido-create-new-buffer (quote always))
- '(ido-enable-flex-matching t)
- '(ido-enable-prefix nil)
- '(ido-everywhere t)
- '(ido-ignore-extensions t)
- '(ido-max-prospects 8)
- '(ido-use-filename-at-point (quote guess))
  '(indent-tabs-mode nil)
  '(indicate-empty-lines t)
  '(inhibit-startup-screen t)
@@ -57,9 +48,8 @@
 ;; No startup graphic
 (setq inhibit-startup-message t)
 
-;; Font
-;;(set-default-font "Envy Code R-12")
-;;(set-frame-font "Envy Code R-12")
+(defun add-path (p)
+  (add-to-list 'load-path p))
 
 (set-default-font "Mensch-12")
 (set-frame-font "Mensch-12")
@@ -99,10 +89,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-
 (global-hl-line-mode 1)
 
 (setq
@@ -113,11 +99,11 @@
  rng-nxml-auto-validate-flag nil)
 
 ;; Load the ensime lisp code...
-(add-to-list 'load-path "~/.emacs.d/ensime/elisp/")
+(add-path "~/.emacs.d/ensime/elisp/")
 (require 'ensime)
 
 ;; Load the scamacs sbt lisp code...
-(add-to-list 'load-path "~/.emacs.d/scamacs/sbt/")
+(add-path "~/.emacs.d/scamacs/sbt/")
 (require 'sbt)
 
 (setq c-mode-hook
@@ -232,7 +218,7 @@ e.g. `HelloWorldString'."
 
 ;; (require 'inf-haskell)
 
-(add-to-list 'load-path "~/.emacs.d/")
+(add-path "~/.emacs.d/")
 (require 'bar-cursor)
 (bar-cursor-mode t)
 (blink-cursor-mode 1)
@@ -265,7 +251,25 @@ e.g. `HelloWorldString'."
 
 (load "~/.emacs.d/modes/vcl-mode.el")
 
-;;(require 'confluence)
-
 (load "~/.emacs.d/elpa/sr-speedbar-0.1.8/sr-speedbar.el")
 (require 'sr-speedbar)
+
+(add-path "~/.emacs.d/elpa/anything-1.287/")
+(add-path "~/.emacs.d/elpa/anything-obsolete-0.1/")
+(add-path "~/.emacs.d/elpa/anything-config-0.4.1/")
+(add-path "~/.emacs.d/elpa/anything-complete-1.86/")
+(add-path "~/.emacs.d/elpa/anything-extension-0.2/")
+(add-path "~/.emacs.d/elpa/anything-exuberant-ctags-0.1.2/")
+(add-path "~/.emacs.d/elpa/anything-git-goto-0.1.0/")
+(add-path "~/.emacs.d/elpa/anything-show-completion-20091119/")
+(add-path "~/.emacs.d/elpa/anything-match-plugin-1.27/")
+
+(require 'anything)
+(require 'anything-config)
+(require 'anything-complete)
+(require 'anything-extension)
+(require 'anything-exuberant-ctags)
+(require 'anything-git-goto)
+(require 'anything-show-completion)
+(require 'anything-match-plugin)
+
