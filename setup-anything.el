@@ -1,0 +1,10 @@
+(require 'anything)
+(require 'anything-config)
+(require 'anything-complete)
+(require 'anything-extension)
+(require 'anything-exuberant-ctags)
+(require 'anything-git-goto)
+(require 'anything-show-completion)
+(require 'anything-match-plugin)
+
+(provide 'setup-anything)
