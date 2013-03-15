@@ -92,7 +92,7 @@
 ;; (cons 'org-magit melpa)
  (cons 'org-mime marmalade)
  (cons 'org-outlook melpa)
- (cons 'org-presie marmalade)
+;; (cons 'org-presie marmalade)
  (cons 'org-readme melpa)
  (cons 'org-table-comment marmalade)
  (cons 'org-toodledo melpa)
