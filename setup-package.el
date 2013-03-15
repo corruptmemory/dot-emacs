@@ -96,7 +96,7 @@
  (cons 'org-readme melpa)
  (cons 'org-table-comment marmalade)
  (cons 'org-toodledo melpa)
- (cons 'org2blog melpa)
+;; (cons 'org2blog melpa)
  (cons 'paredit melpa)
  (cons 'pcache melpa)
  (cons 'projectile melpa)
