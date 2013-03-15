@@ -39,7 +39,7 @@
  (cons 'dired-details melpa)
  (cons 'dired-details+ melpa)
  (cons 'duplicate-thing melpa)
- (cons 'eimp melpa)
+ (cons 'eimp elpa)
  (cons 'el-autoyas melpa)
  (cons 'elisp-slime-nav melpa)
  (cons 'eproject melpa)
