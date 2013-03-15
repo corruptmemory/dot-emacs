@@ -90,7 +90,7 @@
  (cons 'org-mac-iCal melpa)
  (cons 'org-mac-link-grabber melpa)
 ;; (cons 'org-magit melpa)
- (cons 'org-mime melpa)
+ (cons 'org-mime marmalade)
  (cons 'org-outlook melpa)
  (cons 'org-presie marmalade)
  (cons 'org-readme melpa)
