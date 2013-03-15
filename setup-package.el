@@ -71,7 +71,6 @@
  (cons 'helm-migemo melpa)
  (cons 'helm-projectile melpa)
  (cons 'helm-themes melpa)
- (cons 'highline marmalade)
  (cons 'http-post-simple melpa)
  (cons 'key-chord melpa)
  (cons 'lib-requires melpa)
