@@ -101,7 +101,7 @@
  (cons 'pcache melpa)
  (cons 'projectile melpa)
  (cons 'r-autoyas marmalade)
- (cons 'rainbow-mode melpa)
+;; (cons 'rainbow-mode marmalade)
  (cons 's melpa)
  (cons 'scala-mode2 melpa)
  (cons 'smart-tab melpa)
