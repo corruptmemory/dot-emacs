@@ -85,7 +85,7 @@
  (cons 'org melpa)
  (cons 'org-email marmalade)
  (cons 'org-fstree melpa)
- (cons 'org-jekyll melpa)
+;; (cons 'org-jekyll melpa)
  (cons 'org-jira melpa)
  (cons 'org-mac-iCal melpa)
  (cons 'org-mac-link-grabber melpa)
