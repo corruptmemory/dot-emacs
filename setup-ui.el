@@ -4,14 +4,15 @@
 (set-default-font "Source Code Pro-12")
 (set-frame-font "Source Code Pro-12")
 
-(require 'tango-dark-theme)
+(require 'color-theme-sanityinc-tomorrow)
 
 (custom-set-variables
  '(auto-save-default nil)
  '(backup-inhibited t t)
- '(cursor-type (quote bar) t)
- '(custom-enabled-themes (quote (tango-dark)))
- '(custom-safe-themes (quote ("36afe64261e1de73fcfadedf154e4bc2c9ec1969bde0c21798d31366897bc4d2" "5e0fad917cb12cfeb8a18d51d664bcb3efa9b494ff7222a9017808d135706b97" "9af36076d7d1b200def3e21d4f938d3bcfd1d8bb" "84e71fb8bf689e8c7f8b0414ed2c29bb2a0db036" default)))
+ ;; '(cursor-type (quote bar) t)
+ '(cursor-type 'bar t)
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(custom-safe-themes (quote ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default)))
  '(echo-keystrokes 0.01)
  '(fill-column 100)
  '(global-highline-mode t)
@@ -31,13 +32,18 @@
  '(x-select-enable-primary nil))
 
 (custom-set-faces
- '(highline-face ((t (:background "black"))))
- '(helm-selection ((t (:background "black" :underline t))))
- '(highline-face ((t (:background "black"))) t))
+ '(cursor ((((class color) (min-colors 89)) (:background "#fce94f"))))
+ '(helm-selection ((t (:background "#002100" :underline nil))))
+ '(highlight ((t (:inverse-video nil :background "#002100")))))
+
+;; (custom-set-faces
+;;  '(highline-face ((t (:background "black"))))
+;;  '(helm-selection ((t (:background "black" :underline t))))
+;;  '(highline-face ((t (:background "black"))) t))
 
 ;; Enable X clipboard
 (setq x-select-enable-clipboard t)
-
+(setq redisplay-dont-pause t)
 (setq org-src-fontify-natively t)
 (show-paren-mode t)
 (transient-mark-mode t)

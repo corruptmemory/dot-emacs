@@ -59,5 +59,7 @@
 
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 
+(autoload 'git-blame-mode "git-blame"
+  "Minor mode for incremental blame for Git." t)
 
 (provide 'setup-magit)

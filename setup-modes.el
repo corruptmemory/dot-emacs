@@ -1,12 +1,20 @@
-(require 'scala-mode)
-(require 'scala-mode-auto)
+(require 'scala-mode2)
+(require 'git-gutter-fringe)
+(global-git-gutter-mode t)
+
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+
+(require 'markdown-mode+)
 
 (setq
  nxhtml-global-minor-mode t
  mumamo-chunk-coloring 'submode-colored
  nxhtml-skip-welcome t
  indent-region-mode t
- rng-nxml-auto-validate-flag nil)
+ rng-nxml-auto-validate-flag nil
+ scala-indent:align-parameters t
+ scala-indent:default-run-on-strategy 1)
 
 (add-to-list 'auto-mode-alist '("\\.hbs$" . handlebars-mode))
 (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
@@ -18,6 +26,10 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mdwn$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mdt$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.text$" . markdown-mode))
 
 (setq c-mode-hook
       (function (lambda ()
@@ -43,8 +55,6 @@
 
 (setq scala-mode-hook
       (function (lambda ()
-                  (local-set-key [f1] 'helm-for-files)
-                  (yas/minor-mode-on)
                   (setq indent-tabs-mode nil)
                   (setq c-indent-level 2))))
 

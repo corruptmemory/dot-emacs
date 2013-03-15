@@ -49,4 +49,8 @@
      (define-key wdired-mode-map (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
      (define-key wdired-mode-map (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)))
 
+(setq dired-recursive-deletes 'always)
+(setq dired-listing-switches "-alh")
+(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
+
 (provide 'setup-dired)

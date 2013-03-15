@@ -81,4 +81,10 @@ e.g. `HelloWorldString'."
 (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome"
+      browse-url-generic-args (list "--new-window"))
+
+(setq mail-user-agent 'mu4e-user-agent)
+
 (provide 'setup-misc)

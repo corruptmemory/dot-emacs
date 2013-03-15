@@ -6,13 +6,13 @@
 (require 'cl)
 
 (define-project-type scala (generic)
-  (look-for "project/")
-  :relevant-files ("\\.scala$" "\\.sbt$")
-  :irrelevant-files ("target/"))
+  (look-for ".scala")
+  :relevant-files ("\\.scala$" "\\.sbt$" "\\.java$")
+  :irrelevant-files ("target/" "\\.class$" "lib/" "lib_managed/" "\\.jar$"))
 
-(define-project-type git (generic)
-  (look-for ".git")
-  )
+;; (define-project-type git (generic)
+;;   (look-for ".git")
+;;   )
 
 (add-hook 'find-file-hook 'eproject-maybe-turn-on)
 

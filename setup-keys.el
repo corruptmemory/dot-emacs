@@ -3,8 +3,11 @@
 (defun select-current-line ()
   "Select the current line"
   (interactive)
-  (end-of-line) ; move to end of line
-  (push-mark (line-beginning-position) nil 1))
+  (when (null mark-active)
+    (beginning-of-line)
+    (push-mark (point) nil 1))
+  (end-of-line)
+  (forward-char))
 
 (defun my-markdown-mode()
   (interactive)
@@ -29,14 +32,12 @@
 
 (global-set-key [f11] 'compile)
 (global-set-key [f6] 'linum-mode)
-(global-set-key [(meta return)] 'toggle-fullscreen)
+;; (global-set-key [(meta return)] 'toggle-fullscreen)
 (global-set-key (kbd "C-S-d") 'duplicate-thing)
-(global-set-key (kbd "s-L") 'helm-eproject)
 (global-set-key (kbd "C-{") 'shrink-window-horizontally)
 (global-set-key (kbd "C-}") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-{") 'shrink-window)
 (global-set-key (kbd "M-}") 'enlarge-window)
-(global-set-key [f1] 'helm-for-files)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
 
@@ -68,6 +69,6 @@
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
-;; (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
 
 (provide 'setup-keys)
