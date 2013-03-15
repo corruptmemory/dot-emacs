@@ -20,6 +20,8 @@
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
+(require 'setup-package)
+
 (require 'setup-ui)
 
 (column-number-mode)
@@ -51,7 +53,6 @@
 (require 'multiple-cursors)
 (require 'setup-misc)
 (require 'setup-uniquify)
-(require 'setup-package)
 (require 'setup-expand-region)
 (require 'setup-modes)
 (require 'setup-projects)
